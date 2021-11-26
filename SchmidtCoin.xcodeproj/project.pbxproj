@@ -7,18 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CEBC9187C19C593D70B4025 /* Pods_SchmidtCoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D932FCD96C63CDB0A4982A21 /* Pods_SchmidtCoin.framework */; };
+		EB36A2DC274DCE62001CF551 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB36A2DB274DCE62001CF551 /* AppViewModel.swift */; };
+		EB55B8A8270829AC00E9A9CA /* BlockChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55B8A7270829AC00E9A9CA /* BlockChain.swift */; };
+		EB55B8AA270829B500E9A9CA /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55B8A9270829B500E9A9CA /* Block.swift */; };
+		EB55B8AC270829BF00E9A9CA /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55B8AB270829BF00E9A9CA /* Transaction.swift */; };
+		EB55B8AE270829D900E9A9CA /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55B8AD270829D900E9A9CA /* Date+String.swift */; };
+		EB55B8B027082A1900E9A9CA /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55B8AF27082A1900E9A9CA /* Crypto.swift */; };
+		EBC1752927514FB100184157 /* BlockChainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1752827514FB100184157 /* BlockChainView.swift */; };
 		EBD9B1F2270439D400466BCB /* SchmidtCoinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9B1F1270439D400466BCB /* SchmidtCoinApp.swift */; };
 		EBD9B1F4270439D400466BCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9B1F3270439D400466BCB /* ContentView.swift */; };
 		EBD9B1F6270439D600466BCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD9B1F5270439D600466BCB /* Assets.xcassets */; };
 		EBD9B1F9270439D600466BCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD9B1F8270439D600466BCB /* Preview Assets.xcassets */; };
+		EBF2941B274DA6B1002B676C /* Data+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF2941A274DA6B1002B676C /* Data+String.swift */; };
+		EBF2941D274DA842002B676C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBF2941C274DA842002B676C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DE1B55B71D5BD736B9490FE /* Pods-SchmidtCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchmidtCoin.release.xcconfig"; path = "Target Support Files/Pods-SchmidtCoin/Pods-SchmidtCoin.release.xcconfig"; sourceTree = "<group>"; };
+		618CB13BB9B62735E4A1A480 /* Pods-SchmidtCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchmidtCoin.debug.xcconfig"; path = "Target Support Files/Pods-SchmidtCoin/Pods-SchmidtCoin.debug.xcconfig"; sourceTree = "<group>"; };
+		D932FCD96C63CDB0A4982A21 /* Pods_SchmidtCoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchmidtCoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB36A2D1274DAA89001CF551 /* SchmidtCoin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SchmidtCoin.entitlements; sourceTree = "<group>"; };
+		EB36A2DB274DCE62001CF551 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		EB55B8A7270829AC00E9A9CA /* BlockChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChain.swift; sourceTree = "<group>"; };
+		EB55B8A9270829B500E9A9CA /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		EB55B8AB270829BF00E9A9CA /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		EB55B8AD270829D900E9A9CA /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		EB55B8AF27082A1900E9A9CA /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		EBC1752827514FB100184157 /* BlockChainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainView.swift; sourceTree = "<group>"; };
 		EBD9B1EE270439D400466BCB /* SchmidtCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchmidtCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD9B1F1270439D400466BCB /* SchmidtCoinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchmidtCoinApp.swift; sourceTree = "<group>"; };
 		EBD9B1F3270439D400466BCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBD9B1F5270439D600466BCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBD9B1F8270439D600466BCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBF2941A274DA6B1002B676C /* Data+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+String.swift"; sourceTree = "<group>"; };
+		EBF2941C274DA842002B676C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +49,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CEBC9187C19C593D70B4025 /* Pods_SchmidtCoin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D860804E48F7DC1445C2F5A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D932FCD96C63CDB0A4982A21 /* Pods_SchmidtCoin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E53E8220915F7C79B99B65D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				618CB13BB9B62735E4A1A480 /* Pods-SchmidtCoin.debug.xcconfig */,
+				2DE1B55B71D5BD736B9490FE /* Pods-SchmidtCoin.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EB36A2DA274DCE4C001CF551 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB55B8A7270829AC00E9A9CA /* BlockChain.swift */,
+				EB36A2DB274DCE62001CF551 /* AppViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EBD9B1E5270439D400466BCB = {
 			isa = PBXGroup;
 			children = (
 				EBD9B1F0270439D400466BCB /* SchmidtCoin */,
 				EBD9B1EF270439D400466BCB /* Products */,
+				E53E8220915F7C79B99B65D3 /* Pods */,
+				D860804E48F7DC1445C2F5A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,9 +103,14 @@
 		EBD9B1F0270439D400466BCB /* SchmidtCoin */ = {
 			isa = PBXGroup;
 			children = (
-				EBD9B1F1270439D400466BCB /* SchmidtCoinApp.swift */,
-				EBD9B1F3270439D400466BCB /* ContentView.swift */,
+				EB36A2D1274DAA89001CF551 /* SchmidtCoin.entitlements */,
+				EBF29418274DA608002B676C /* Model */,
+				EBF29416274DA5EB002B676C /* View */,
+				EB36A2DA274DCE4C001CF551 /* ViewModel */,
+				EBF29417274DA5F7002B676C /* Services */,
+				EBF29419274DA614002B676C /* Utilities */,
 				EBD9B1F5270439D600466BCB /* Assets.xcassets */,
+				EBF2941C274DA842002B676C /* GoogleService-Info.plist */,
 				EBD9B1F7270439D600466BCB /* Preview Content */,
 			);
 			path = SchmidtCoin;
@@ -67,6 +124,42 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EBF29416274DA5EB002B676C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBD9B1F1270439D400466BCB /* SchmidtCoinApp.swift */,
+				EBD9B1F3270439D400466BCB /* ContentView.swift */,
+				EBC1752827514FB100184157 /* BlockChainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EBF29417274DA5F7002B676C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EB55B8AF27082A1900E9A9CA /* Crypto.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EBF29418274DA608002B676C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB55B8A9270829B500E9A9CA /* Block.swift */,
+				EB55B8AB270829BF00E9A9CA /* Transaction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EBF29419274DA614002B676C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EBF2941A274DA6B1002B676C /* Data+String.swift */,
+				EB55B8AD270829D900E9A9CA /* Date+String.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBD9B1FC270439D600466BCB /* Build configuration list for PBXNativeTarget "SchmidtCoin" */;
 			buildPhases = (
+				7F76F18EA63658DECD1242F3 /* [CP] Check Pods Manifest.lock */,
 				EBD9B1EA270439D400466BCB /* Sources */,
 				EBD9B1EB270439D400466BCB /* Frameworks */,
 				EBD9B1EC270439D400466BCB /* Resources */,
+				FB57FDCBCEF947455C00767D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,18 +222,69 @@
 			files = (
 				EBD9B1F9270439D600466BCB /* Preview Assets.xcassets in Resources */,
 				EBD9B1F6270439D600466BCB /* Assets.xcassets in Resources */,
+				EBF2941D274DA842002B676C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F76F18EA63658DECD1242F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SchmidtCoin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB57FDCBCEF947455C00767D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SchmidtCoin/Pods-SchmidtCoin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SchmidtCoin/Pods-SchmidtCoin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SchmidtCoin/Pods-SchmidtCoin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EBD9B1EA270439D400466BCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF2941B274DA6B1002B676C /* Data+String.swift in Sources */,
+				EB36A2DC274DCE62001CF551 /* AppViewModel.swift in Sources */,
 				EBD9B1F4270439D400466BCB /* ContentView.swift in Sources */,
+				EB55B8AA270829B500E9A9CA /* Block.swift in Sources */,
+				EB55B8AE270829D900E9A9CA /* Date+String.swift in Sources */,
 				EBD9B1F2270439D400466BCB /* SchmidtCoinApp.swift in Sources */,
+				EBC1752927514FB100184157 /* BlockChainView.swift in Sources */,
+				EB55B8A8270829AC00E9A9CA /* BlockChain.swift in Sources */,
+				EB55B8B027082A1900E9A9CA /* Crypto.swift in Sources */,
+				EB55B8AC270829BF00E9A9CA /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +409,11 @@
 		};
 		EBD9B1FD270439D600466BCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 618CB13BB9B62735E4A1A480 /* Pods-SchmidtCoin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SchmidtCoin/SchmidtCoin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SchmidtCoin/Preview Content\"";
@@ -277,7 +425,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -293,9 +441,11 @@
 		};
 		EBD9B1FE270439D600466BCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DE1B55B71D5BD736B9490FE /* Pods-SchmidtCoin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SchmidtCoin/SchmidtCoin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SchmidtCoin/Preview Content\"";
@@ -307,7 +457,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
