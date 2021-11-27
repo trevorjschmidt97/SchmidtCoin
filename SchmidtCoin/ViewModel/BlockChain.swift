@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CryptoKit
 import SwiftUI
 
 class BlockChain: ObservableObject {
@@ -30,20 +29,20 @@ class BlockChain: ObservableObject {
         pendingTransactions[transaction.id] = transaction
     }
     
-    func minePendingTransactions(miningRewardWallet: Curve25519.Signing.PublicKey) {
+    func minePendingTransactions(miningRewardPublicKey: String) {
         var index = 0
         var previousHash = ""
         var miningReward = 400.0
-        let difficulty = 3
+        var difficulty = 3
         
         if !chain.isEmpty {
             index = latestBlock().index + 1
             previousHash = latestBlock().hash
             miningReward = miningReward - Double(latestBlock().index)
-//            difficulty = difficulty// + latestBlock().index
+            difficulty = difficulty + latestBlock().index
         }
         
-        let rewardTransaction = Transaction(fromPrivateKey: nil, toAddress: miningRewardWallet, amount: miningReward, comments: "Mining Reward")
+        let rewardTransaction = Transaction(fromPrivateKey: nil, toAddress: miningRewardPublicKey, amount: miningReward, comments: "Mining Reward")
         var pendingTransactionsList = Array(pendingTransactions.values)
         pendingTransactionsList.append(rewardTransaction)
         var newBlock = Block(index: index, transactions: pendingTransactionsList, previousHash: previousHash)
@@ -62,17 +61,17 @@ class BlockChain: ObservableObject {
         }
     }
     
-    func getBalanceOfWallet(address: Curve25519.Signing.PublicKey) -> Double {
+    func getBalanceOfWallet(address: String) -> Double {
         var bal = 0.0
         
         for block in chain {
             for transaction in block.transactions {
                 if let fromAddress = transaction.fromAddress {
-                    if fromAddress.rawRepresentation == address.rawRepresentation {
+                    if fromAddress == address {
                         bal -= transaction.amount
                     }
                 }
-                if transaction.toAddress.rawRepresentation == address.rawRepresentation {
+                if transaction.toAddress == address {
                     bal += transaction.amount
                 }
             }

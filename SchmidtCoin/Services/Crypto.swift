@@ -15,21 +15,40 @@ struct Crypto {
         return hash.map { String(format: "%02hhx", $0) }.joined()
     }
     
-    static func genKeyPair() -> Curve25519.Signing.PrivateKey {
+    static func generatePrivateKey() -> Curve25519.Signing.PrivateKey {
         return Curve25519.Signing.PrivateKey.init()
     }
     
-    static func genKeyPairFromRawData(_ data: Data) -> Curve25519.Signing.PrivateKey? {
-        return try? Curve25519.Signing.PrivateKey.init(rawRepresentation: data)
+    static func generatePrivateKey(fromString: String) -> Curve25519.Signing.PrivateKey? {
+        if let data = fromString.data(using: .utf8) {
+            return try? Curve25519.Signing.PrivateKey.init(rawRepresentation: data)
+        }
+        return nil
+    }
+    
+    static func generatePublicKey(fromString: String) -> Curve25519.Signing.PublicKey? {
+        if let data = fromString.data(using: .utf8) {
+            return try? Curve25519.Signing.PublicKey.init(rawRepresentation: data)
+        }
+        return nil
+    }
+    
+    static func getPublicKeyString(forPrivateKeyString skString: String) -> String? {
+        if let sk = generatePrivateKey(fromString: skString) {
+            return sk.publicKey.rawRepresentation.base64EncodedString()
+        }
+        return nil
     }
     
     /**
      Returns nil if can't convert transaction to data, or the signature method throws an error
      Returns a signature(data) if successfully signs transaction data.
     */
-    static func signTransaction(transaction: Transaction, privateKey: Curve25519.Signing.PrivateKey) -> Data? {
-        if let transactionData = Transaction.transactionData(transaction: transaction) {
-            return try? privateKey.signature(for: transactionData)
+    static func signTransaction(transaction: Transaction, privateKeyString: String) -> String? {
+        if let privateKey = generatePrivateKey(fromString: privateKeyString),
+           let transactionData = Transaction.transactionData(transaction: transaction),
+           let signatureData = try? privateKey.signature(for: transactionData) {
+            return signatureData.base64EncodedString()
         }
         return nil
     }
@@ -40,18 +59,12 @@ struct Crypto {
     */
     static func isValidSignature(transaction: Transaction) -> Bool {
         if let fromAddress = transaction.fromAddress,
+           let fromPublicKey = Crypto.generatePublicKey(fromString: fromAddress),
            let signature = transaction.signature,
+           let signatureData = signature.data(using: .utf8),
            let transactionData = Transaction.transactionData(transaction: transaction) {
-            return fromAddress.isValidSignature(signature, for: transactionData)
+            return fromPublicKey.isValidSignature(signatureData, for: transactionData)
         }
         return false
     }
-    
-//    static func signTransaction(transaction: Transaction, privateKey: P256.Signing.PrivateKey) -> P256.Signing.ECDSASignature? {
-//        return try? privateKey.signature(for: transaction.transactionData)
-//    }
-//    
-//    static func verifySignature(publicKey: P256.Signing.PublicKey, signature: P256.Signing.ECDSASignature, transaction: Transaction) -> Bool {
-//        return publicKey.isValidSignature(signature, for: transaction.transactionData)
-//    }
 }

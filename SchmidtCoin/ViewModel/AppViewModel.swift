@@ -11,5 +11,5 @@ class AppViewModel: ObservableObject {
     static let shared = AppViewModel()
     private init() { }
     
-    let keypair = Crypto.genKeyPair()
+    let keypair = Crypto.generatePrivateKey()
 }

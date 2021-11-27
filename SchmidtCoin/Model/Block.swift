@@ -67,12 +67,12 @@ struct Block: Identifiable {
         return str
     }
 }
-let exampleKeyPair = Crypto.genKeyPair()
-let exampleBlock = Block(index: 1,
-                         previousHash: "000b49eb89a620faedb1e6ea1e8aeeb8e0b3ba3978553be9adb8bd1d133389f5",
-                         timeStamp: "2021-11-26 10:28:50.9430",
-                         transactions: [
-                            Transaction(fromPrivateKey: exampleKeyPair, toAddress: exampleKeyPair.publicKey, amount: 50, comments: "Test")
-                         ],
-                         nonce: 5626,
-                         hash: "0007993194595c42a4634fb4fbeebd0a412311137321e34aa2a46df6dfe03b65")
+let exampleKeyPair = Crypto.generatePrivateKey()
+//let exampleBlock = Block(index: 1,
+//                         previousHash: "000b49eb89a620faedb1e6ea1e8aeeb8e0b3ba3978553be9adb8bd1d133389f5",
+//                         timeStamp: "2021-11-26 10:28:50.9430",
+//                         transactions: [
+//                            Transaction(fromPrivateKey: exampleKeyPair, toAddress: exampleKeyPair.publicKey, amount: 50, comments: "Test")
+//                         ],
+//                         nonce: 5626,
+//                         hash: "0007993194595c42a4634fb4fbeebd0a412311137321e34aa2a46df6dfe03b65")

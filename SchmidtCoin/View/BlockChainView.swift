@@ -17,9 +17,9 @@ struct BlockChainView: View {
     }
 }
 
-struct BlockChainView_Previews: PreviewProvider {
-    static var previews: some View {
-        BlockChainView(chain: [exampleBlock])
-    }
-}
+//struct BlockChainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BlockChainView(chain: [exampleBlock])
+//    }
+//}
 

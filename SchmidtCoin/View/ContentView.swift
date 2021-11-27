@@ -11,8 +11,8 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var appViewModel = AppViewModel.shared
     @StateObject private var blockChain = BlockChain()
-    let keypair1 = Crypto.genKeyPair()
-    let keypair2 = Crypto.genKeyPair()
+    let keypair1 = Crypto.generatePrivateKey()
+    let keypair2 = Crypto.generatePrivateKey()
     
     var body: some View {
         List {
@@ -29,21 +29,21 @@ struct ContentView: View {
         }
         HStack {
             Button("Start Mining") {
-                blockChain.minePendingTransactions(miningRewardWallet: keypair1.publicKey)
-                print(blockChain.toString())
+                blockChain.minePendingTransactions(miningRewardPublicKey: keypair1.publicKey.rawRepresentation.base64EncodedString())
+                print(blockChain.getBalanceOfWallet(address: keypair1.publicKey.rawRepresentation.base64EncodedString()))
             }
         }
             .padding()
             .onAppear {
-                blockChain.minePendingTransactions(miningRewardWallet: keypair1.publicKey)
-                blockChain.addPendingTransaction(Transaction(fromPrivateKey: keypair1, toAddress: keypair2.publicKey, amount: 5, comments: "Hey"))
-                blockChain.addPendingTransaction(Transaction(fromPrivateKey: keypair1, toAddress: keypair2.publicKey, amount: 5, comments: "number 2"))
-//                blockChain.minePendingTransactions(miningRewardWallet: keypair2.publicKey)
 //                blockChain.minePendingTransactions(miningRewardWallet: keypair1.publicKey)
-//                print(blockChain.toString())
-                print("This block chain is\(blockChain.isChainValid() ? "" : "NOT") valid")
-                print("keypair1 balance: \(blockChain.getBalanceOfWallet(address: keypair1.publicKey))")
-                print("keypair2 balance: \(blockChain.getBalanceOfWallet(address: keypair2.publicKey))")
+//                blockChain.addPendingTransaction(Transaction(fromPrivateKey: keypair1, toAddress: keypair2.publicKey, amount: 5, comments: "Hey"))
+//                blockChain.addPendingTransaction(Transaction(fromPrivateKey: keypair1, toAddress: keypair2.publicKey, amount: 5, comments: "number 2"))
+////                blockChain.minePendingTransactions(miningRewardWallet: keypair2.publicKey)
+////                blockChain.minePendingTransactions(miningRewardWallet: keypair1.publicKey)
+////                print(blockChain.toString())
+//                print("This block chain is\(blockChain.isChainValid() ? "" : "NOT") valid")
+//                print("keypair1 balance: \(blockChain.getBalanceOfWallet(address: keypair1.publicKey))")
+//                print("keypair2 balance: \(blockChain.getBalanceOfWallet(address: keypair2.publicKey))")
             }
             
     }
