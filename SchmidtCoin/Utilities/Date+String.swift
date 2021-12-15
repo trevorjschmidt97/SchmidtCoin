@@ -14,3 +14,11 @@ extension Date {
         return formatter.string(from: self)
     }
 }
+
+extension String {
+    func longStringToDate() -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSSS"
+        return formatter.date(from: self) ?? Date()
+    }
+}

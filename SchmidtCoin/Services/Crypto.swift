@@ -10,24 +10,28 @@ import CryptoKit
 
 struct Crypto {
     static func hash(fromString input: String) -> String {
-        let data = Data(input.utf8) // Data
-        let hash = SHA256.hash(data: data) // Hash the data
+        let data = Data(input.utf8)
+        let hash = SHA256.hash(data: data)
         return hash.map { String(format: "%02hhx", $0) }.joined()
     }
     
     static func generatePrivateKey() -> Curve25519.Signing.PrivateKey {
         return Curve25519.Signing.PrivateKey.init()
     }
+    static func generateKeyPair() -> (String, String) {
+        let keyPair = Curve25519.Signing.PrivateKey.init()
+        return (keyPair.rawRepresentation.base64EncodedString(), keyPair.publicKey.rawRepresentation.base64EncodedString())
+    }
     
     static func generatePrivateKey(fromString: String) -> Curve25519.Signing.PrivateKey? {
-        if let data = fromString.data(using: .utf8) {
+        if let data = Data(base64Encoded: fromString) {
             return try? Curve25519.Signing.PrivateKey.init(rawRepresentation: data)
         }
         return nil
     }
     
     static func generatePublicKey(fromString: String) -> Curve25519.Signing.PublicKey? {
-        if let data = fromString.data(using: .utf8) {
+        if let data = Data(base64Encoded: fromString) {
             return try? Curve25519.Signing.PublicKey.init(rawRepresentation: data)
         }
         return nil
@@ -61,7 +65,7 @@ struct Crypto {
         if let fromAddress = transaction.fromAddress,
            let fromPublicKey = Crypto.generatePublicKey(fromString: fromAddress),
            let signature = transaction.signature,
-           let signatureData = signature.data(using: .utf8),
+           let signatureData = Data(base64Encoded: signature),
            let transactionData = Transaction.transactionData(transaction: transaction) {
             return fromPublicKey.isValidSignature(signatureData, for: transactionData)
         }

@@ -11,5 +11,9 @@ class AppViewModel: ObservableObject {
     static let shared = AppViewModel()
     private init() { }
     
-    let keypair = Crypto.generatePrivateKey()
+    @Published var privateKey: String?
+    
+    func checkSignIn() {
+        privateKey = UserDefaults.standard.string(forKey: "privateKey")
+    }
 }

@@ -8,24 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		3CEBC9187C19C593D70B4025 /* Pods_SchmidtCoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D932FCD96C63CDB0A4982A21 /* Pods_SchmidtCoin.framework */; };
+		690D22092756BF5900605D7F /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690D22082756BF5900605D7F /* ProfileImageView.swift */; };
+		6913594027558A27008A380F /* MiningPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6913593F27558A27008A380F /* MiningPageView.swift */; };
+		6913594227558B0D008A380F /* TransactionPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6913594127558B0D008A380F /* TransactionPageView.swift */; };
+		6913594427558B7D008A380F /* ProfilePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6913594327558B7D008A380F /* ProfilePageView.swift */; };
+		6913594627558CF3008A380F /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6913594527558CF3008A380F /* TransactionView.swift */; };
+		691359482756B205008A380F /* FirebaseDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691359472756B205008A380F /* FirebaseDatabaseService.swift */; };
+		69B30A2C2766DB2300468F4B /* BasicTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B30A2B2766DB2300468F4B /* BasicTransactionView.swift */; };
+		69B30A2E2766DB2E00468F4B /* BasicBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B30A2D2766DB2E00468F4B /* BasicBlockView.swift */; };
+		69D666E4275352560043A27E /* SignUpPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D666E3275352560043A27E /* SignUpPageView.swift */; };
 		EB36A2DC274DCE62001CF551 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB36A2DB274DCE62001CF551 /* AppViewModel.swift */; };
 		EB55B8A8270829AC00E9A9CA /* BlockChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55B8A7270829AC00E9A9CA /* BlockChain.swift */; };
 		EB55B8AA270829B500E9A9CA /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55B8A9270829B500E9A9CA /* Block.swift */; };
 		EB55B8AC270829BF00E9A9CA /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55B8AB270829BF00E9A9CA /* Transaction.swift */; };
 		EB55B8AE270829D900E9A9CA /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55B8AD270829D900E9A9CA /* Date+String.swift */; };
 		EB55B8B027082A1900E9A9CA /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55B8AF27082A1900E9A9CA /* Crypto.swift */; };
-		EBC1752927514FB100184157 /* BlockChainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1752827514FB100184157 /* BlockChainView.swift */; };
+		EBC1752927514FB100184157 /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC1752827514FB100184157 /* BlockView.swift */; };
 		EBD9B1F2270439D400466BCB /* SchmidtCoinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9B1F1270439D400466BCB /* SchmidtCoinApp.swift */; };
 		EBD9B1F4270439D400466BCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD9B1F3270439D400466BCB /* ContentView.swift */; };
 		EBD9B1F6270439D600466BCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD9B1F5270439D600466BCB /* Assets.xcassets */; };
 		EBD9B1F9270439D600466BCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD9B1F8270439D600466BCB /* Preview Assets.xcassets */; };
-		EBF2941B274DA6B1002B676C /* Data+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF2941A274DA6B1002B676C /* Data+String.swift */; };
 		EBF2941D274DA842002B676C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBF2941C274DA842002B676C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2DE1B55B71D5BD736B9490FE /* Pods-SchmidtCoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchmidtCoin.release.xcconfig"; path = "Target Support Files/Pods-SchmidtCoin/Pods-SchmidtCoin.release.xcconfig"; sourceTree = "<group>"; };
 		618CB13BB9B62735E4A1A480 /* Pods-SchmidtCoin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SchmidtCoin.debug.xcconfig"; path = "Target Support Files/Pods-SchmidtCoin/Pods-SchmidtCoin.debug.xcconfig"; sourceTree = "<group>"; };
+		690D22082756BF5900605D7F /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		6913593F27558A27008A380F /* MiningPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiningPageView.swift; sourceTree = "<group>"; };
+		6913594127558B0D008A380F /* TransactionPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionPageView.swift; sourceTree = "<group>"; };
+		6913594327558B7D008A380F /* ProfilePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageView.swift; sourceTree = "<group>"; };
+		6913594527558CF3008A380F /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		691359472756B205008A380F /* FirebaseDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseService.swift; sourceTree = "<group>"; };
+		69B30A2B2766DB2300468F4B /* BasicTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTransactionView.swift; sourceTree = "<group>"; };
+		69B30A2D2766DB2E00468F4B /* BasicBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicBlockView.swift; sourceTree = "<group>"; };
+		69D666E3275352560043A27E /* SignUpPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageView.swift; sourceTree = "<group>"; };
 		D932FCD96C63CDB0A4982A21 /* Pods_SchmidtCoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SchmidtCoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB36A2D1274DAA89001CF551 /* SchmidtCoin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SchmidtCoin.entitlements; sourceTree = "<group>"; };
 		EB36A2DB274DCE62001CF551 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
@@ -34,13 +51,12 @@
 		EB55B8AB270829BF00E9A9CA /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		EB55B8AD270829D900E9A9CA /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		EB55B8AF27082A1900E9A9CA /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
-		EBC1752827514FB100184157 /* BlockChainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainView.swift; sourceTree = "<group>"; };
+		EBC1752827514FB100184157 /* BlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockView.swift; sourceTree = "<group>"; };
 		EBD9B1EE270439D400466BCB /* SchmidtCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchmidtCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD9B1F1270439D400466BCB /* SchmidtCoinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchmidtCoinApp.swift; sourceTree = "<group>"; };
 		EBD9B1F3270439D400466BCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBD9B1F5270439D600466BCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBD9B1F8270439D600466BCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EBF2941A274DA6B1002B676C /* Data+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+String.swift"; sourceTree = "<group>"; };
 		EBF2941C274DA842002B676C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +145,15 @@
 			children = (
 				EBD9B1F1270439D400466BCB /* SchmidtCoinApp.swift */,
 				EBD9B1F3270439D400466BCB /* ContentView.swift */,
-				EBC1752827514FB100184157 /* BlockChainView.swift */,
+				69D666E3275352560043A27E /* SignUpPageView.swift */,
+				6913594127558B0D008A380F /* TransactionPageView.swift */,
+				6913593F27558A27008A380F /* MiningPageView.swift */,
+				6913594327558B7D008A380F /* ProfilePageView.swift */,
+				69B30A2D2766DB2E00468F4B /* BasicBlockView.swift */,
+				EBC1752827514FB100184157 /* BlockView.swift */,
+				69B30A2B2766DB2300468F4B /* BasicTransactionView.swift */,
+				6913594527558CF3008A380F /* TransactionView.swift */,
+				690D22082756BF5900605D7F /* ProfileImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				EB55B8AF27082A1900E9A9CA /* Crypto.swift */,
+				691359472756B205008A380F /* FirebaseDatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -154,7 +179,6 @@
 		EBF29419274DA614002B676C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				EBF2941A274DA6B1002B676C /* Data+String.swift */,
 				EB55B8AD270829D900E9A9CA /* Date+String.swift */,
 			);
 			path = Utilities;
@@ -275,16 +299,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBF2941B274DA6B1002B676C /* Data+String.swift in Sources */,
 				EB36A2DC274DCE62001CF551 /* AppViewModel.swift in Sources */,
+				690D22092756BF5900605D7F /* ProfileImageView.swift in Sources */,
 				EBD9B1F4270439D400466BCB /* ContentView.swift in Sources */,
+				6913594627558CF3008A380F /* TransactionView.swift in Sources */,
 				EB55B8AA270829B500E9A9CA /* Block.swift in Sources */,
 				EB55B8AE270829D900E9A9CA /* Date+String.swift in Sources */,
 				EBD9B1F2270439D400466BCB /* SchmidtCoinApp.swift in Sources */,
-				EBC1752927514FB100184157 /* BlockChainView.swift in Sources */,
+				69B30A2E2766DB2E00468F4B /* BasicBlockView.swift in Sources */,
+				6913594227558B0D008A380F /* TransactionPageView.swift in Sources */,
+				EBC1752927514FB100184157 /* BlockView.swift in Sources */,
 				EB55B8A8270829AC00E9A9CA /* BlockChain.swift in Sources */,
+				6913594027558A27008A380F /* MiningPageView.swift in Sources */,
 				EB55B8B027082A1900E9A9CA /* Crypto.swift in Sources */,
+				69B30A2C2766DB2300468F4B /* BasicTransactionView.swift in Sources */,
+				69D666E4275352560043A27E /* SignUpPageView.swift in Sources */,
+				6913594427558B7D008A380F /* ProfilePageView.swift in Sources */,
 				EB55B8AC270829BF00E9A9CA /* Transaction.swift in Sources */,
+				691359482756B205008A380F /* FirebaseDatabaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,8 +455,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,8 +488,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

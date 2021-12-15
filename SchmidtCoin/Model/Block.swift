@@ -6,19 +6,23 @@
 //
 
 import Foundation
-import SwiftUI
 
-struct Block: Identifiable {
+struct Block: Identifiable, Codable {
     var index: Int
     var previousHash: String
     var timeStamp: String
     var transactions: [Transaction]
     var nonce: Int
     var hash: String = ""
+    
+    // Computed Vars
     var id: Int {
         index
     }
     
+    /**
+     Initializing a new block in preparation to start mining.
+    */
     init(index: Int, transactions: [Transaction], previousHash: String = "") {
         self.index = index
         self.transactions = transactions
@@ -28,6 +32,9 @@ struct Block: Identifiable {
         self.hash = Block.computeBlockHash(block: self)
     }
     
+    /**
+     Basically the free init.
+    */
     init(index: Int, previousHash: String, timeStamp: String, transactions: [Transaction], nonce: Int, hash: String) {
         self.index = index
         self.transactions = transactions
@@ -67,12 +74,18 @@ struct Block: Identifiable {
         return str
     }
 }
-let exampleKeyPair = Crypto.generatePrivateKey()
-//let exampleBlock = Block(index: 1,
-//                         previousHash: "000b49eb89a620faedb1e6ea1e8aeeb8e0b3ba3978553be9adb8bd1d133389f5",
-//                         timeStamp: "2021-11-26 10:28:50.9430",
-//                         transactions: [
-//                            Transaction(fromPrivateKey: exampleKeyPair, toAddress: exampleKeyPair.publicKey, amount: 50, comments: "Test")
-//                         ],
-//                         nonce: 5626,
-//                         hash: "0007993194595c42a4634fb4fbeebd0a412311137321e34aa2a46df6dfe03b65")
+
+let exampleBlock = Block(index: 1,
+                         previousHash: "000082ca0e14e38703fb82ad4bf6f52953383c445175df2d9d03474fc4bb98a8",
+                         timeStamp: "2021-11-27 16:17:24.2980",
+                         transactions: [
+                            Transaction(id: "B425B54F-AB00-474F-83A6-B709FB548882",
+                                        timeStamp: "2021-11-27 16:17:24.2980",
+                                        amount: 400,
+                                        comments: "Mining Reward",
+                                        fromAddress: nil,
+                                        toAddress: "5HRcLBVpBP5aYTKl5U2XxUS5n9VAiefHGhjkjk67kBs=",
+                                        signature: nil)
+                         ],
+                         nonce: 5626,
+                         hash: "0007993194595c42a4634fb4fbeebd0a412311137321e34aa2a46df6dfe03b65")
